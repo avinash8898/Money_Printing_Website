@@ -1,0 +1,25 @@
+.scroll-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .scroll-content {
+      display: inline-block;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    .scroll-content img {
+      display: inline-block;
+      width: 200px; /* Adjust as needed */
+      height: auto;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }

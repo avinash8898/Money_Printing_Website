@@ -1,0 +1,36 @@
+.scrolling-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.scrolling-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.scrolling-track img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+/* Smooth left-to-right infinite scrolling */
+.left-to-right {
+  animation-name: scroll-right;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Keyframe to scroll from left to right */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
